@@ -10,7 +10,7 @@ document.querySelector("button.submitButton").addEventListener("click", function
         document.querySelector("h3.fail-message").style.display = "block";
     } else {
         firebaseRef.ref().once("value", function (snapshot) {
-            if (snapshot) {
+            if (snapshot.toJSON() !== null) {
                 counters = snapshot.toJSON().counters;
                 counterDetails = Object.keys(counters);
                 for (var j = 0; j < counterDetails.length; j++) {
