@@ -14,3 +14,7 @@ h3.success-message, h3.fail-message {
     font-size: 20px;
     margin-left: 80px;
 }
+
+button.submitButton {
+    margin-top: 40px;
+}
