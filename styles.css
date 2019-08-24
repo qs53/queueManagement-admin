@@ -1,0 +1,16 @@
+h2.my-div {
+    text-align: center;
+    font-size: 38px;
+}
+
+form.admin-form {
+    margin: 70px 50px 50px 90px;
+    width: 60%;
+    font-size: 21px;
+}
+
+h3.success-message, h3.fail-message {
+    display: none;
+    font-size: 20px;
+    margin-left: 80px;
+}
