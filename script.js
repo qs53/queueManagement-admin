@@ -32,6 +32,6 @@ document.querySelector("button.submitButton").addEventListener("click", function
 
         counter = 0;
         document.querySelector("h3.success-message").style.display = "block";
-        setTimeout(() => document.querySelector("h3.success-message").style.display = "none", 4000);
+        setTimeout(() => document.querySelector("h3.success-message").style.display = "none", 3000);
     }
 });
