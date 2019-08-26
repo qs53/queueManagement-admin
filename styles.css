@@ -9,7 +9,7 @@ form.admin-form {
     font-size: 21px;
 }
 
-h3.success-message, h3.fail-message {
+h3.success-message, h3.fail-message, h3.secret-key-invalid {
     display: none;
     font-size: 20px;
     margin-left: 80px;
