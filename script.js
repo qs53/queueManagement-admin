@@ -6,6 +6,7 @@ document.querySelector("button.submitButton").addEventListener("click", function
     let counterNumber = document.getElementById("counter-number").value;
     let prefix = document.getElementById("prefix").value;
     let key = document.getElementById("secret-key").value;
+    let form = document.querySelector("form");
 
     if (counterName === "" || counterNumber === "" || prefix === "" || key === "") {
         document.querySelector("h3.fail-message").style.display = "block";
@@ -39,9 +40,11 @@ document.querySelector("button.submitButton").addEventListener("click", function
             });
 
             counter = 0;
+
             document.querySelector("h3.fail-message").style.display = "none";
             document.querySelector("h3.secret-key-invalid").style.display = "none";
             document.querySelector("h3.success-message").style.display = "block";
+            form.reset();
             setTimeout(() => {
                 document.querySelector("h3.success-message").style.display = "none";
             }, 3000);
