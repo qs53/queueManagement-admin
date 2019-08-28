@@ -8,12 +8,14 @@ document.querySelector("button.submitButton").addEventListener("click", function
     let key = document.getElementById("secret-key").value;
     let form = document.querySelector("form");
 
+    document.querySelector("h3.fail-message").style.display = "none";
+    document.querySelector("h3.secret-key-invalid").style.display = "none";
+
     if (counterName === "" || counterNumber === "" || prefix === "" || key === "") {
         document.querySelector("h3.fail-message").style.display = "block";
-        document.querySelector("h3.secret-key-invalid").style.display = "none";
     } else {
         firebaseRef.ref().once("value", async function (snapshot) {
-            if (snapshot.toJSON() !== null) {
+            if (snapshot.toJSON() !== null && snapshot.toJSON().counters) {
                 let counters = await snapshot.toJSON().counters;
                 let counterDetails = Object.keys(counters);
                 let secretKey = await snapshot.toJSON().secretKey;
@@ -41,8 +43,6 @@ document.querySelector("button.submitButton").addEventListener("click", function
 
             counter = 0;
 
-            document.querySelector("h3.fail-message").style.display = "none";
-            document.querySelector("h3.secret-key-invalid").style.display = "none";
             document.querySelector("h3.success-message").style.display = "block";
             form.reset();
             setTimeout(() => {

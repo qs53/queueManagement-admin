@@ -18,43 +18,11 @@
 </head>
 <body>
 <h2 class="p-3 mb-2 bg-secondary text-white my-div">Admin Portal</h2>
-<form name="form-admin" class="admin-form">
-    <div class="form-group">
-        <label>Secret Key</label>
-        <input name="secret-key" type="password" class="form-control" placeholder="Enter Secret Key" id="secret-key" required>
-    </div>
-    <div class="form-group">
-        <label>Counter Name</label>
-        <input name="counter-name" type="text" class="form-control" placeholder="Enter Counter Name" id="counter-name" required>
-    </div>
-    <div class="form-group">
-        <label>Counter Number</label>
-        <input name="counter-number" type="text" class="form-control" placeholder="Enter Counter Number" id="counter-number" required>
-    </div>
-    <div class="form-group">
-        <label>Prefix</label>
-        <input name="prefix" type="text" class="form-control" placeholder="Enter Prefix" id="prefix" required>
-    </div>
-    <button type="button" class="btn btn-primary submitButton">Submit</button>
+<form class="admin-form" action="add-counter/addCounter.html">
+    <button type="submit" class="btn btn-success btn-lg btn-block add-btn">Add Counter</button>
 </form>
-<h3 class="success-message text-success">Counter information successfully submitted!</h3>
-<h3 class="fail-message text-danger">Please fill all the fields.</h3>
-<h3 class="secret-key-invalid text-danger">Secret key entered is invalid.</h3>
-
-<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script>
-<script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyB5tN9SfaeIkxgsgHeLIudaP6_0fcVdkiY",
-        authDomain: "queue-management-b979b.firebaseapp.com",
-        databaseURL: "https://queue-management-b979b.firebaseio.com",
-        projectId: "queue-management-b979b",
-        storageBucket: "",
-        messagingSenderId: "441374399413",
-        appId: "1:441374399413:web:95f82c3373cba090"
-    };
-    firebase.initializeApp(firebaseConfig);
-</script>
-<script src="script.js"></script>
+<form class="admin-form" action="delete-counter/deleteCounter.html">
+    <button type="submit" class="btn btn-success btn-lg btn-block">Delete Counter</button>
+</form>
 </body>
 </html>

@@ -9,13 +9,22 @@ h2.my-div {
     font-size: 38px;
 }
 
-button.btn {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 40px;
-    font-size: 28px;
+form.admin-form {
+    margin: 70px 50px 50px 90px;
+    width: 60%;
+    font-size: 21px;
+    padding: 50px;
+    border-radius: 20px;
+    border: solid 4px darkgrey;
 }
 
-button.add-btn {
-    margin-top: 80px;
+h3.success-message, h3.fail-message, h3.secret-key-invalid {
+    display: none;
+    font-size: 22px;
+    margin-left: 90px;
+}
+
+button.submitButton {
+    margin-top: 40px;
+    font-size: 20px;
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Portal - Delete Counter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h2 class="p-3 mb-2 bg-secondary text-white my-div">Admin Portal - Delete Counter</h2>
+<form name="form-admin" class="admin-form bg-light">
+    <div class="form-group">
+        <label>Secret Key</label>
+        <input name="secret-key" type="password" class="form-control" placeholder="Enter Secret Key" id="secret-key" required>
+    </div>
+    <div class="form-group">
+        <label>Counter Name</label>
+        <input name="counter-name" type="text" class="form-control" placeholder="Enter Counter Name" id="counter-name" required>
+    </div>
+    <div class="form-group">
+        <label>Counter Number</label>
+        <input name="counter-number" type="text" class="form-control" placeholder="Enter Counter Number" id="counter-number" required>
+    </div>
+    <button type="button" class="btn btn-primary submitButton">Submit</button>
+</form>
+<h3 class="success-message text-success">Counter information successfully deleted!</h3>
+<h3 class="fail-message text-danger">Please fill all the fields.</h3>
+<h3 class="secret-key-invalid text-danger">Secret key entered is invalid.</h3>
+<h3 class="counter-not-exist text-danger">Counter does not exist.</h3>
+
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyB5tN9SfaeIkxgsgHeLIudaP6_0fcVdkiY",
+        authDomain: "queue-management-b979b.firebaseapp.com",
+        databaseURL: "https://queue-management-b979b.firebaseio.com",
+        projectId: "queue-management-b979b",
+        storageBucket: "",
+        messagingSenderId: "441374399413",
+        appId: "1:441374399413:web:95f82c3373cba090"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
