@@ -4,13 +4,21 @@ body {
     background-size: cover;
 }
 
+h4.bg-warning {
+    padding: 10px;
+    margin-left: 90px;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
 h2.my-div {
     text-align: center;
     font-size: 38px;
 }
 
 form.admin-form {
-    margin: 70px 50px 50px 90px;
+    margin: 30px 50px 50px 90px;
     width: 60%;
     font-size: 21px;
     padding: 50px;
